@@ -9,6 +9,9 @@ const StyledHeaderContainer = styled.div`
 `;
 
 const StyledCTA = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: ${colours.red};
   height: 100%;
   width: 224px;
