@@ -20,6 +20,7 @@ const StyledCTA = styled.div`
   height: 100%;
   width: 224px;
   color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 const StyledNav = styled.nav`
@@ -30,24 +31,27 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled.a`
   margin-left: 20px;
+  padding: 5px;
+  font-family: 'ABeeZee', sans-serif;
+  ${props => props.isCurrentPage && `background: ${colours.yellow}; color: black`}
 `;
 
 const Logo = () => <img src={LogoImage} height={52} alt="Logo" />;
 
 const Links = () => (
   <StyledNav>
-    <StyledLink>About</StyledLink>
+    <StyledLink isCurrentPage={true}>About</StyledLink>
     <StyledLink>Blog</StyledLink>
     <StyledLink>Portfolio</StyledLink>
     <StyledLink>CV</StyledLink>
   </StyledNav>
 );
 
-const Header = (includeCTA) => (
+const Header = ({ includeCTA }) => (
   <StyledHeaderContainer>
     <Links />
     <Logo />
-    <StyledCTA>Get in touch</StyledCTA>
+    { includeCTA && <StyledCTA>Get in touch</StyledCTA> }
   </StyledHeaderContainer>
 );
 
