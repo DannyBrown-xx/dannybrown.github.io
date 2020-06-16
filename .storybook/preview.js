@@ -32,6 +32,6 @@ addParameters({
         },
       },
     },
-    defaultViewport: 'responsive',
+    defaultViewport: 'mobile',
   },
 });
