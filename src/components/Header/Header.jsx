@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components";
 import colours from '../../utils/colours';
-import LogoImage from '../../../content/assets/logo.png';
+import LogoImage from './logo.png';
 import HamburgerIcon from './hamburger-icon.svg';
 import CloseIcon from './close-icon.svg';
 import { useMediaQuery } from 'react-responsive'
